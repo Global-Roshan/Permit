@@ -1,0 +1,10 @@
+<Differences>
+<change>Removed: &lt;role-name&gt;Invient.Special.Manage.All&lt;/role-name&gt;</change>
+<change>Removed: &lt;security-role&gt;&lt;/security-role&gt;</change>
+<change>Added: &lt;role-name&gt;Invient.Special.Manage.All&lt;/role-name&gt;</change>
+<change>Added: &lt;security-role&gt;&lt;/security-role&gt;</change>
+<change>Removed: &lt;role-name&gt;Invient.Scheduler&lt;/role-name&gt;</change>
+<change>Added: &lt;role-name&gt;Invient.View.Contacts&lt;/role-name&gt;</change>
+<change>Removed: &lt;role-name&gt;Invient.View.Contacts&lt;/role-name&gt;</change>
+<change>Added: &lt;role-name&gt;Invient.Scheduler&lt;/role-name&gt;</change>
+</Differences>

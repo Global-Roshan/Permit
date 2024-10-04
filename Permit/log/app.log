@@ -1,0 +1,46 @@
+2024-09-19 09:50:54 INFO  org.example.Main - Into the Main class Constructor
+2024-09-19 09:50:54 INFO  org.example.Main - Initialized Main class object
+2024-09-19 09:50:54 INFO  org.example.Main - checking the argument length...1
+2024-09-19 09:50:54 INFO  org.example.filter.ArgsValidate - Args username checking
+2024-09-19 09:50:54 ERROR org.example.filter.ArgsValidate - Exception 
+jakarta.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 3.0.0.v202012081010): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Access denied for user 'hello'@'localhost' (using password: YES)
+Error Code: 1045
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:853) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:222) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:200) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:542) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:153) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191) ~[eclipselink-3.0.0.jar:3.0.0]
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80) ~[jakarta.persistence-api-3.1.0.jar:3.1.0]
+	at org.example.filter.ArgsValidate.Compare(ArgsValidate.java:49) ~[classes/:?]
+	at org.example.Main.argumentsCompare(Main.java:170) ~[classes/:?]
+	at org.example.Main.main(Main.java:44) ~[classes/:?]
+Caused by: org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLException: Access denied for user 'hello'@'localhost' (using password: YES)
+Error Code: 1045
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:334) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:329) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.sessions.DefaultConnector.connect(DefaultConnector.java:142) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:172) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:225) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:807) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:256) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:766) ~[eclipselink-3.0.0.jar:3.0.0]
+	... 9 more
+Caused by: java.sql.SQLException: Access denied for user 'hello'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.2.0.jar:8.2.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:189) ~[java.sql:?]
+	at org.eclipse.persistence.sessions.DefaultConnector.connect(DefaultConnector.java:102) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:172) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:225) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:807) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:256) ~[eclipselink-3.0.0.jar:3.0.0]
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:766) ~[eclipselink-3.0.0.jar:3.0.0]
+	... 9 more

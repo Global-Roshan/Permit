@@ -1,0 +1,8 @@
+<session>
+<ejb-name>ExportsSessionBean</ejb-name>
+<local-home>com.invient.business.exports.ExportsHome</local-home>
+<local>com.invient.business.exports.Exports</local>
+<ejb-class>com.invient.business.exports.ExcelExportsSessionBean</ejb-class>
+<session-type>Stateless</session-type>
+<transaction-type>Container</transaction-type>
+</session>

@@ -1,0 +1,8 @@
+<session>
+<ejb-name>PShipBalSheetSessionBean</ejb-name>
+<local-home>com.invient.business.partnerships.investments.PShipBalSheetHome</local-home>
+<local>com.invient.business.partnerships.investments.PShipBalSheetLocal</local>
+<ejb-class>com.invient.business.partnerships.investments.PShipBalSheetSessionBean</ejb-class>
+<session-type>Stateless</session-type>
+<transaction-type>Container</transaction-type>
+</session>

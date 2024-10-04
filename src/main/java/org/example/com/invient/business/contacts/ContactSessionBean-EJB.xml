@@ -1,0 +1,8 @@
+<session>
+<ejb-name>ContactsSessionBean</ejb-name>
+<local-home>com.invient.business.contacts.ContactsHome</local-home>
+<local>com.invient.business.contacts.ContactsLocal</local>
+<ejb-class>com.invient.business.contacts.ContactsSessionBean</ejb-class>
+<session-type>Stateless</session-type>
+<transaction-type>Container</transaction-type>
+</session>
